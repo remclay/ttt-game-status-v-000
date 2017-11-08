@@ -40,8 +40,9 @@ def over?(board)
 end
 
 def winner(board)
-  win_combination = won?(board)
+  if won?(board) 
+    win_combination = won?(board)
     return board[win_combination[0]]
-  draw?(board)
+  else
     return nil
 end
